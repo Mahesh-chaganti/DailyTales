@@ -2,8 +2,6 @@ package com.mahesh.storyaday.ui.presentation.screens
 
 import android.os.Build
 import androidx.annotation.RequiresApi
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -18,25 +16,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.mahesh.storyaday.GenresAndIcons
-import com.mahesh.storyaday.R
-import com.mahesh.storyaday.ui.presentation.NotificationButton
-import com.mahesh.storyaday.ui.presentation.showBasicNotification
 import com.mahesh.storyaday.viewmodel.StoriesViewModel
 import io.github.alexzhirkevich.cupertino.CupertinoText
 import io.github.alexzhirkevich.cupertino.ExperimentalCupertinoApi
 
-@RequiresApi(Build.VERSION_CODES.TIRAMISU)
 @OptIn(ExperimentalCupertinoApi::class)
 @Composable
 fun HomeScreen(navController: NavController, storiesViewModel: StoriesViewModel) {
@@ -80,17 +71,5 @@ fun HomeScreen(navController: NavController, storiesViewModel: StoriesViewModel)
             }
         }
 
-    }
-}
-
-@Composable
-fun CupertCard(content: @Composable () -> Unit) {
-    Box(
-        modifier = Modifier
-            .shadow(4.dp, RoundedCornerShape(8.dp)) // Add shadow for elevation
-            .background(Color.White, RoundedCornerShape(8.dp)) // Background and rounded corners
-            .padding(16.dp) // Add padding for content
-    ) {
-        content()
     }
 }

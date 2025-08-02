@@ -60,6 +60,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    //cupertino
     implementation(libs.cupertino)
     implementation(libs.cupertino.native)
     implementation(libs.cupertino.adaptive)
@@ -70,38 +71,20 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.55")
     kapt( libs.androidx.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
-
-
     //okhttp
     implementation(libs.okhttp)
     implementation(libs.logging.interceptor)
-
-
-
-//    implementation(files("libs/gson-2.2.4.jar"))
-
     //lifecycle
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.lifecycle.runtime.compose)
-
-
-    // ... other dependencies
     implementation(libs.material3)
-    implementation(libs.kotlinx.serialization.json)
-
     //navigation
     implementation(libs.androidx.navigation.compose)
-
     //MoshiConverter
     implementation(libs.moshi.kotlin)
-    // ... other dependencies
 
     //coil
     implementation(libs.coil.compose)
-
-    //palette API
-    implementation(libs.androidx.palette.ktx)
-
 
     //bottomnav
     implementation(libs.androidx.material)
@@ -109,13 +92,8 @@ dependencies {
     //datastore
     implementation(libs.androidx.datastore.preferences)
 
-    //accompanist
-    implementation(libs.accompanist.permissions)
     //room
     kapt("androidx.room:room-compiler:2.7.2")
 
     implementation(libs.androidx.room.runtime)
-    implementation(libs.play.services.ads)
-
-
 }
